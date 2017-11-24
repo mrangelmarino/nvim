@@ -747,9 +747,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>507 340 606 469 0 0 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>203 283 796 473 0 0 1920 1058 </string>
+	<string>274 168 918 512 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>777 62 570 452 0 0 1440 878 </string>
+	<string>700 94 730 452 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>590 102 730 452 0 0 1920 1058 </string>
 	<key>New Bookmarks</key>
@@ -1066,7 +1066,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Recycle</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -1533,7 +1533,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-23T08:02:56Z</date>
+	<date>2017-11-24T19:24:53Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
