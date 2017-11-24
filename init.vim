@@ -17,6 +17,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree' " :NERDTree
 Plug 'tpope/vim-surround'  " cs{( ds{ yss{
 Plug 'christoomey/vim-system-copy' " cp cv
+Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc'
 
 " syntax
 Plug 'othree/yajs.vim'
@@ -26,6 +28,8 @@ Plug 'othree/javascript-libraries-syntax.vim'
 
 " appearance
 Plug 'vim-airline/vim-airline'
+Plug 'bling/vim-bufferline'
+Plug 'airblade/vim-gitgutter'
 
 " theme
 Plug 'tyrannicaltoucan/vim-quantum'
@@ -43,6 +47,7 @@ set ignorecase
 set mouse=a
 set fileencoding=utf-8
 set pumheight=30
+set sessionoptions-=tabpages
 
 " persistent undo
 silent !mkdir ~/.config/nvim/backups > /dev/null 2>&1
@@ -62,6 +67,7 @@ set linebreak
 set listchars=tab:│·,trail:·,extends:→
 set list
 let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter= 'unique_tail_improved'
 
 " indentation
 set shiftwidth=2
