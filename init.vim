@@ -21,6 +21,10 @@ Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'Townk/vim-autoclose'
+Plug 'tpope/vim-fugitive'
+Plug 'kablamo/vim-git-log'
+Plug 'tpope/vim-rhubarb'
 
 " syntax
 Plug 'othree/yajs.vim'
@@ -51,10 +55,14 @@ set fileencoding=utf-8
 set pumheight=30
 set sessionoptions-=buffers,tabpages
 set hidden
+let $FZF_DEFAULT_COMMAND = 'fd --type f --exclude .git'
 
 " auto-open NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" NERDTree toggle
+map <C-n> :NERDTreeToggle<CR>
 
 " persistent undo
 silent !mkdir ~/.config/nvim/backups > /dev/null 2>&1
