@@ -19,6 +19,8 @@ Plug 'tpope/vim-surround'  " cs{( ds{ yss{
 Plug 'christoomey/vim-system-copy' " cp cv
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " syntax
 Plug 'othree/yajs.vim'
@@ -47,7 +49,12 @@ set ignorecase
 set mouse=a
 set fileencoding=utf-8
 set pumheight=30
-set sessionoptions-=tabpages
+set sessionoptions-=buffers,tabpages
+set hidden
+
+" auto-open NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " persistent undo
 silent !mkdir ~/.config/nvim/backups > /dev/null 2>&1
