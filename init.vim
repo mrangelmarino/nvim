@@ -14,8 +14,9 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 " behavior
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree' " :NERDTree
+Plug 'tpope/vim-surround'  " cs{( ds{ yss{
+Plug 'christoomey/vim-system-copy' " cp cv
 
 " syntax
 Plug 'othree/yajs.vim'
@@ -60,6 +61,7 @@ set wrap
 set linebreak
 set listchars=tab:│·,trail:·,extends:→
 set list
+let g:airline#extensions#tabline#enabled=1
 
 " indentation
 set shiftwidth=2
