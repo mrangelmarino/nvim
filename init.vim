@@ -25,6 +25,7 @@ Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
 Plug 'kablamo/vim-git-log'
 Plug 'tpope/vim-rhubarb'
+Plug 'qpkorr/vim-bufkill'
 
 " syntax
 Plug 'othree/yajs.vim'
