@@ -36,6 +36,7 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'bling/vim-bufferline'
 Plug 'airblade/vim-gitgutter'
+Plug 'ryanoasis/vim-devicons'
 
 " theme
 Plug 'tyrannicaltoucan/vim-quantum'
@@ -52,6 +53,7 @@ set smartcase
 set ignorecase
 set mouse=a
 set fileencoding=utf-8
+set encoding=utf8
 set pumheight=30
 set sessionoptions-=buffers,tabpages
 set hidden
@@ -69,6 +71,9 @@ silent !mkdir ~/.config/nvim/backups > /dev/null 2>&1
 set undodir=~/.config/nvim/backups
 set undofile
 
+" remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
 """""""""""""""
 " appearance
 """""""""""""""
@@ -83,6 +88,10 @@ set listchars=tab:│·,trail:·,extends:→
 set list
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter= 'unique_tail_improved'
+let g:webdevicons_enable=1
+let g:webdevicons_enable_nerdtree=1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
 
 " indentation
 set shiftwidth=2
@@ -102,6 +111,4 @@ set termguicolors
 let g:quantum_black=1
 let g:quantum_italics=1
 let g:airline_theme='quantum'
-colorscheme quantum 
-
-
+colorscheme quantum
