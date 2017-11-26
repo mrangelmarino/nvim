@@ -101,7 +101,7 @@ set tabstop=2
 set expandtab
 set smartindent
 set nofoldenable
-set colorcolumn=80
+set colorcolumn=100
 
 
 """""""""""""""
