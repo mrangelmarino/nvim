@@ -62,7 +62,7 @@ let $FZF_DEFAULT_COMMAND = 'fd --type f --exclude .git'
 
 " auto-open NERDTree
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | wincmd p | endif
 
 " NERDTree toggle
 map <C-n> :NERDTreeToggle<CR>
@@ -74,6 +74,12 @@ set undofile
 
 " remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
+
+" make moving between windows easier
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 """""""""""""""
 " appearance
