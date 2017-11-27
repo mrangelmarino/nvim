@@ -28,6 +28,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'qpkorr/vim-bufkill'
 
 " syntax
+Plug 'vim-syntastic/syntastic'
 Plug 'othree/yajs.vim'
 Plug 'leshill/vim-json'
 Plug 'heavenshell/vim-jsdoc'
@@ -80,6 +81,16 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" eslint
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 """""""""""""""
 " appearance
