@@ -82,6 +82,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" map jk to esc in insert mode
+:imap jk <Esc>
+
 " eslint
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}

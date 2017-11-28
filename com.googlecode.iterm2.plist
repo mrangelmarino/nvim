@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -699,6 +701,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>4A7DDBEA-2874-451D-9441-C6C97AB3009C</string>
+	<key>EnableProxyIcon</key>
+	<false/>
 	<key>HideTab</key>
 	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -749,7 +753,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>77 269 606 469 0 0 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>69 214 796 473 0 0 1440 878 </string>
+	<string>120 295 796 473 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>274 84 1000 707 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1494,7 +1498,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>A07F8456-1A20-4A7F-8582-A75DEC7E2DE3</string>
 	<key>NoSyncLastTipTime</key>
-	<real>533423496.95215899</real>
+	<real>533536437.92046499</real>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncReplaceProfileWarning</key>
@@ -1507,6 +1511,14 @@
 	<array>
 		<string>000</string>
 		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+		<string>0003</string>
+		<string>0004</string>
+		<string>0005</string>
+		<string>0006</string>
+		<string>0007</string>
+		<string>0008</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -1554,7 +1566,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-26T23:15:03Z</date>
+	<date>2017-11-28T04:33:31Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1569,6 +1581,8 @@
 	<array>
 		<string>Recent Directories</string>
 	</array>
+	<key>UseBorder</key>
+	<false/>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WordCharacters</key>
