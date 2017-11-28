@@ -805,15 +805,13 @@
 		</dict>
 	</dict>
 	<key>HideTab</key>
-	<true/>
+	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>JobName</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>NSFontPanelAttributes</key>
-	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Sites/nvim</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -849,16 +847,18 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>385 492 445 77 0 0 1920 1058 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>77 269 606 469 0 0 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>804 328 958 451 0 0 1920 1058 </string>
+	<string>1454 1518 796 473 717 900 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>752 121 1000 707 0 0 1920 1058 </string>
+	<string>248 125 1000 707 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>726 101 1000 707 0 0 1920 1058 </string>
+	<string>26 150 1000 707 0 0 1440 878 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>766 1560 1000 707 717 900 2560 1418 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>903 1288 1000 707 717 900 2560 1418 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>1895 1522 1000 707 717 900 2560 1418 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1594,35 +1594,10 @@
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
-	<key>NoSyncInstallUtilitiesPackage</key>
-	<true/>
-	<key>NoSyncInstallUtilitiesPackage_selection</key>
-	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
-	<string>A07F8456-1A20-4A7F-8582-A75DEC7E2DE3</string>
-	<key>NoSyncLastTipTime</key>
-	<real>533536437.92046499</real>
-	<key>NoSyncPermissionToShowTip</key>
-	<true/>
-	<key>NoSyncReplaceProfileWarning</key>
-	<true/>
-	<key>NoSyncReplaceProfileWarning_selection</key>
-	<integer>0</integer>
+	<string>7EE35051-1019-481B-B0D7-1A0B61351B40</string>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>533116188.36570698</real>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>000</string>
-		<string>0000</string>
-		<string>0001</string>
-		<string>0002</string>
-		<string>0003</string>
-		<string>0004</string>
-		<string>0005</string>
-		<string>0006</string>
-		<string>0007</string>
-		<string>0008</string>
-	</array>
+	<real>533495635.35400599</real>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1657,7 +1632,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/angel/Sites/nvim</string>
+	<string>/Users/marinoa/Sites/nvim</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
@@ -1665,11 +1640,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=16</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=51</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-28T04:33:31Z</date>
+	<date>2017-11-28T19:16:38Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>

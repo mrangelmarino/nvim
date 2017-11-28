@@ -23,6 +23,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
+Plug 'tommcdo/vim-fubitive'
 Plug 'kablamo/vim-git-log'
 Plug 'tpope/vim-rhubarb'
 Plug 'qpkorr/vim-bufkill'
@@ -79,6 +80,10 @@ set undofile
 
 " remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
+
+" move between buffers
+nnoremap <A-Right> :bnext<CR>
+nnoremap <A-Left> :bprevious<CR>
 
 " make moving between windows easier
 nnoremap <S-h> <C-w>h
