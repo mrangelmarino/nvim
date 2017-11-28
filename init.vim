@@ -39,6 +39,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'bling/vim-bufferline'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " theme
 Plug 'tyrannicaltoucan/vim-quantum'
@@ -67,6 +68,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | wincmd p |
 
 " NERDTree toggle
 map <C-n> :NERDTreeToggle<CR>
+
+let g:NERDTreeShowHidden=1
+let g:NERDTreeShowBookmarks=1
 
 " persistent undo
 silent !mkdir ~/.config/nvim/backups > /dev/null 2>&1
@@ -119,8 +123,10 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter= 'unique_tail_improved'
 let g:webdevicons_enable=1
 let g:webdevicons_enable_nerdtree=1
-let g:webdevicons_enable_airline_tabline = 1
-let g:webdevicons_enable_airline_statusline = 1
+let g:webdevicons_enable_airline_tabline=1
+let g:webdevicons_enable_airline_statusline=1
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
 
 " indentation
 set shiftwidth=2
@@ -130,7 +136,7 @@ set expandtab
 set smartindent
 set nofoldenable
 set colorcolumn=100
-
+:command Guides IndentGuidesToggle
 
 """""""""""""""
 " theme
