@@ -753,9 +753,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>77 269 606 469 0 0 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>120 295 796 473 0 0 1920 1058 </string>
+	<string>890 262 796 473 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>274 84 1000 707 0 0 1440 878 </string>
+	<string>752 121 1000 707 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>306 49 1090 707 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
@@ -1100,6 +1100,8 @@
 			<real>1</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
+			<key>Initial Text</key>
+			<string>source ~/.bashrc</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>

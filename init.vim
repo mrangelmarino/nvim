@@ -77,13 +77,21 @@ set undofile
 autocmd BufWritePre * :%s/\s\+$//e
 
 " make moving between windows easier
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <S-h> <C-w>h
+nnoremap <S-j> <C-w>j
+nnoremap <S-k> <C-w>k
+nnoremap <S-l> <C-w>l
 
 " map jk to esc in insert mode
 :imap jk <Esc>
+
+" map fuzzy finder
+nnoremap <S-f> :Files<CR>
+nnoremap <S-t> :Ag<CR>
+
+" highlight occurences on double click
+:map <2-LeftMouse> *
+nnoremap <silent> <Esc><Esc> :noh<CR>
 
 " eslint
 set statusline+=%#warningmsg#
