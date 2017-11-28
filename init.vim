@@ -86,6 +86,10 @@ nnoremap <S-j> <C-w>j
 nnoremap <S-k> <C-w>k
 nnoremap <S-l> <C-w>l
 
+" map j/k to gk/gj to move around visual lines
+nnoremap <buffer> <silent> j gj
+nnoremap <buffer> <silent> k gk
+
 " map jk to esc in insert mode
 :imap jk <Esc>
 
@@ -136,7 +140,9 @@ set expandtab
 set smartindent
 set nofoldenable
 set colorcolumn=100
-:command Guides IndentGuidesToggle
+if empty(":Guides")
+  :command Guides IndentGuidesToggle
+endif
 
 """""""""""""""
 " theme
