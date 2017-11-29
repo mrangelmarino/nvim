@@ -68,7 +68,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | wincmd p | endif
 
 " NERDTree toggle
-map <C-n> :NERDTreeToggle<CR>
+nnoremap \| :NERDTreeToggle<CR>
 
 let g:NERDTreeShowHidden=1
 let g:NERDTreeShowBookmarks=1
@@ -82,8 +82,8 @@ set undofile
 autocmd BufWritePre * :%s/\s\+$//e
 
 " move between buffers
-nnoremap <A-Right> :bnext<CR>
-nnoremap <A-Left> :bprevious<CR>
+nnoremap <S-Right> :bnext<CR>
+nnoremap <S-Left> :bprevious<CR>
 
 " make moving between windows easier
 nnoremap <S-h> <C-w>h
