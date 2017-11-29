@@ -82,13 +82,11 @@ set undofile
 autocmd BufWritePre * :%s/\s\+$//e
 
 " move between buffers
-nnoremap <S-Right> :bnext<CR>
-nnoremap <S-Left> :bprevious<CR>
+nnoremap <S-k> :bnext<CR>
+nnoremap <S-j> :bprevious<CR>
 
 " make moving between windows easier
 nnoremap <S-h> <C-w>h
-nnoremap <S-j> <C-w>j
-nnoremap <S-k> <C-w>k
 nnoremap <S-l> <C-w>l
 
 " map j/k to gk/gj to move around visual lines
