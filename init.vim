@@ -62,6 +62,7 @@ set pumheight=30
 set sessionoptions-=buffers,tabpages
 set hidden
 let $FZF_DEFAULT_COMMAND = 'fd --type f --exclude .git'
+set autoindent
 
 " auto-open NERDTree
 autocmd StdinReadPre * let s:std_in=1
