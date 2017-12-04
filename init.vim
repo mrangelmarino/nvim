@@ -27,6 +27,7 @@ Plug 'tommcdo/vim-fubitive'
 Plug 'kablamo/vim-git-log'
 Plug 'tpope/vim-rhubarb'
 Plug 'qpkorr/vim-bufkill'
+Plug 'schickling/vim-bufonly'
 
 " syntax
 Plug 'vim-syntastic/syntastic'
@@ -89,6 +90,11 @@ nnoremap <S-j> :bprevious<CR>
 " make moving between windows easier
 nnoremap <S-h> <C-w>h
 nnoremap <S-l> <C-w>l
+
+" close all other buffers except the one you're on
+if empty(":BO")
+  :command BO BufOnly
+endif
 
 " map j/k to gk/gj to move around visual lines
 nnoremap <buffer> <silent> j gj
