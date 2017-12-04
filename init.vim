@@ -35,6 +35,7 @@ Plug 'othree/yajs.vim'
 Plug 'leshill/vim-json'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'nelsyeung/twig.vim'
 
 " appearance
 Plug 'vim-airline/vim-airline'
