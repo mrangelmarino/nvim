@@ -113,11 +113,11 @@ nnoremap <S-t> :Ag<CR>
 :map <2-LeftMouse> *
 nnoremap <silent> <Esc><Esc> :noh<CR>
 
-" map enter to add space before
-nnoremap <CR> moO<Esc>`o
+" map space to add space before
+nnoremap <space> moO<Esc>`ok
 
-" map space to add space after
-nnoremap <space> moo<Esc>`
+" map enter to add space after
+nnoremap <CR> moo<Esc>`oj
 
 " eslint
 set statusline+=%#warningmsg#
