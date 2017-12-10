@@ -448,6 +448,28 @@
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
                     "simple_modifications": []
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 626,
+                        "vendor_id": 1452
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": true,
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "fn"
+                            },
+                            "to": {
+                                "key_code": "right_option"
+                            }
+                        }
+                    ]
                 }
             ],
             "fn_function_keys": [
@@ -553,6 +575,14 @@
             "simple_modifications": [
                 {
                     "from": {
+                        "key_code": "application"
+                    },
+                    "to": {
+                        "key_code": "right_option"
+                    }
+                },
+                {
+                    "from": {
                         "key_code": "caps_lock"
                     },
                     "to": {
@@ -569,26 +599,18 @@
                 },
                 {
                     "from": {
-                        "key_code": "right_option"
-                    },
-                    "to": {
-                        "key_code": "right_control"
-                    }
-                },
-                {
-                    "from": {
-                        "key_code": "application"
-                    },
-                    "to": {
-                        "key_code": "right_option"
-                    }
-                },
-                {
-                    "from": {
                         "key_code": "right_control"
                     },
                     "to": {
                         "key_code": "eject"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "right_option"
+                    },
+                    "to": {
+                        "key_code": "right_control"
                     }
                 }
             ],

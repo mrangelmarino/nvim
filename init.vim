@@ -32,6 +32,7 @@ Plug 'schickling/vim-bufonly'
 " syntax
 Plug 'vim-syntastic/syntastic'
 Plug 'othree/yajs.vim'
+Plug 'mxw/vim-jsx'
 Plug 'leshill/vim-json'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'othree/javascript-libraries-syntax.vim'
@@ -154,6 +155,9 @@ set colorcolumn=100
 if empty(":Guides")
   :command Guides IndentGuidesToggle
 endif
+
+" syntax
+let g:jsx_ext_required = 0
 
 """""""""""""""
 " theme
