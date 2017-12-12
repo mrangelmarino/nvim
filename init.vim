@@ -119,6 +119,12 @@ nnoremap <space> moO<Esc>`ok
 " map enter to add space after
 nnoremap <CR> moo<Esc>`oj
 
+" map tab to indent cursor two spaces
+nnoremap <Tab> ll
+
+" map shift+tab to outdent cursor two spaces
+nnoremap <S-Tab> hh
+
 " eslint
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
