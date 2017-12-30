@@ -9,7 +9,8 @@
             "complex_modifications": {
                 "parameters": {
                     "basic.to_delayed_action_delay_milliseconds": 500,
-                    "basic.to_if_alone_timeout_milliseconds": 1000
+                    "basic.to_if_alone_timeout_milliseconds": 1000,
+                    "basic.to_if_held_down_threshold_milliseconds": 500
                 },
                 "rules": [
                     {
@@ -432,7 +433,7 @@
                         "product_id": 321,
                         "vendor_id": 1241
                     },
-                    "ignore": true,
+                    "ignore": false,
                     "manipulate_caps_lock_led": false,
                     "simple_modifications": []
                 },
@@ -502,7 +503,7 @@
                         "key_code": "f4"
                     },
                     "to": {
-                        "key_code": "launchpad"
+                        "key_code": "f4"
                     }
                 },
                 {
@@ -611,6 +612,14 @@
                     },
                     "to": {
                         "key_code": "right_control"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "left_arrow"
+                    },
+                    "to": {
+                        "key_code": "right_option"
                     }
                 }
             ],
