@@ -74,6 +74,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | wincmd p |
 
 " NERDTree toggle
 nnoremap \| :NERDTreeToggle<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
 
 let g:NERDTreeShowHidden=1
 let g:NERDTreeShowBookmarks=1
@@ -82,9 +83,6 @@ let g:NERDTreeShowBookmarks=1
 silent !mkdir ~/.config/nvim/backups > /dev/null 2>&1
 set undodir=~/.config/nvim/backups
 set undofile
-
-" change working directory to current file so autocomplete files works
-autocmd BufEnter * silent! lcd %:p:h
 
 " remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
