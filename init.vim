@@ -83,6 +83,9 @@ silent !mkdir ~/.config/nvim/backups > /dev/null 2>&1
 set undodir=~/.config/nvim/backups
 set undofile
 
+" change working directory to current file so autocomplete files works
+autocmd BufEnter * silent! lcd %:p:h
+
 " remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -114,6 +117,9 @@ inoremap <Up> <C-o>gk
 " map fuzzy finder
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>a :Ag<CR>
+
+" autocompletion type
+let g:SuperTabDefaultCompletionType = "context"
 
 " highlight occurences on double click
 :map <2-LeftMouse> *
