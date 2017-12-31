@@ -21,17 +21,18 @@ Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'Townk/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'tommcdo/vim-fubitive'
 Plug 'kablamo/vim-git-log'
 Plug 'tpope/vim-rhubarb'
 Plug 'qpkorr/vim-bufkill'
 Plug 'schickling/vim-bufonly'
+Plug 'ervandew/supertab'
 
 " syntax
 Plug 'vim-syntastic/syntastic'
-Plug 'othree/yajs.vim'
+Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leshill/vim-json'
 Plug 'heavenshell/vim-jsdoc'
@@ -50,10 +51,10 @@ Plug 'tyrannicaltoucan/vim-quantum'
 
 call plug#end()
 
-
 """""""""""""""
 " behavior
 """""""""""""""
+let mapleader = "\;"
 set history=500
 set gdefault
 set smartcase
@@ -99,15 +100,20 @@ if empty(":BO")
 endif
 
 " map j/k to gk/gj to move around visual lines
-nnoremap <buffer> <silent> j gj
-nnoremap <buffer> <silent> k gk
-
-" map jk to esc in insert mode
-:imap jk <Esc>
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
 
 " map fuzzy finder
-nnoremap <S-f> :Files<CR>
-nnoremap <S-t> :Ag<CR>
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>a :Ag<CR>
 
 " highlight occurences on double click
 :map <2-LeftMouse> *
@@ -119,11 +125,8 @@ nnoremap <space> moO<Esc>`ok
 " map enter to add space after
 nnoremap <CR> moo<Esc>`oj
 
-" map tab to indent cursor two spaces
-nnoremap <Tab> ll
-
-" map shift+tab to outdent cursor two spaces
-nnoremap <S-Tab> hh
+" map redo to leader
+nnoremap <Leader>r <C-r>
 
 " eslint
 set statusline+=%#warningmsg#
@@ -170,6 +173,7 @@ endif
 
 " syntax
 let g:jsx_ext_required = 0
+let g:used_javascript_libs = 'jquery, underscore, angularjs, angularui, angularuirouter, react, flux, vue'
 
 """""""""""""""
 " theme
