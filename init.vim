@@ -29,12 +29,13 @@ Plug 'tpope/vim-rhubarb'
 Plug 'qpkorr/vim-bufkill'
 Plug 'schickling/vim-bufonly'
 Plug 'ervandew/supertab'
+Plug 'scrooloose/nerdcommenter'
 
 " syntax
 Plug 'vim-syntastic/syntastic'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'leshill/vim-json'
+Plug 'elzr/vim-json'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'nelsyeung/twig.vim'
@@ -162,6 +163,7 @@ let g:webdevicons_enable_airline_tabline=1
 let g:webdevicons_enable_airline_statusline=1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
+let g:NERDSpaceDelims = 1
 
 " indentation
 set shiftwidth=2
@@ -169,8 +171,10 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 set smartindent
-set nofoldenable
 set colorcolumn=100
+set foldmethod=indent
+set nofoldenable
+set foldlevelstart=99
 if empty(":Guides")
   :command Guides IndentGuidesToggle
 endif
@@ -178,6 +182,7 @@ endif
 " syntax
 let g:jsx_ext_required = 0
 let g:used_javascript_libs = 'jquery, underscore, angularjs, angularui, angularuirouter, react, flux, vue'
+let g:vim_json_syntax_conceal = 0
 
 """""""""""""""
 " theme
