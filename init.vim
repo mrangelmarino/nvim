@@ -116,6 +116,7 @@ inoremap <Up> <C-o>gk
 " map fuzzy finder
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>a :Ag<CR>
+nnoremap <Leader>b :Buffers<CR>
 
 " autocompletion type
 let g:SuperTabDefaultCompletionType = "context"
