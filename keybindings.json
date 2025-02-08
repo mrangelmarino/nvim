@@ -1,0 +1,23 @@
+[
+    // Easy window navigation
+    {
+        "key": "shift+h",
+        "command": "workbench.action.navigateLeft",
+        "when": "editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "shift+l",
+        "command": "workbench.action.navigateRight",
+        "when": "editorTextFocus && vim.mode != 'Insert'"
+    },
+    // Quick file switching
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen"
+    },
+    // Toggle sidebar with same shortcut
+    {
+        "key": "ctrl+\\",
+        "command": "workbench.action.toggleSidebarVisibility"
+    }
+] 

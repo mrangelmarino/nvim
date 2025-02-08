@@ -1,0 +1,30 @@
+{
+    // Vim settings
+    "vim.leader": ";",
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.surround": true,
+    "vim.incsearch": true,
+    "vim.easymotion": true,
+    "vim.handleKeys": {
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-x>": false,
+        "<C-z>": false,
+        "<C-f>": false
+    },
+    // Custom key mappings to match your Neovim config
+    "vim.normalModeKeyBindings": [],
+    "vim.insertModeKeyBindings": [],
+    "vim.visualModeKeyBindings": [],
+    // Make VS Code more Vim-like
+    "editor.lineNumbers": "relative",
+    "editor.cursorSurroundingLines": 8,
+    "workbench.list.automaticKeyboardNavigation": false,
+    "vim.statusBarColorControl": false,
+    "vim.statusBarColors.normal": "#000000",
+    "vim.searchHighlightColor": "rgba(150, 150, 255, 0.3)",
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.duration": 200
+}

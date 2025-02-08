@@ -23,3 +23,62 @@
 
 `alias v="nvim"`
 `alias vim="nvim"`
+
+## Keyboard Shortcuts
+
+### Navigation
+| Shortcut | Description |
+|----------|-------------|
+| `\|` or `;n` | Toggle file explorer (NERDTree) |
+| `Shift + k` | Next buffer |
+| `Shift + j` | Previous buffer |
+| `Shift + h` | Move to left window |
+| `Shift + l` | Move to right window |
+
+### File Finding
+| Shortcut | Description |
+|----------|-------------|
+| `;f` | Fuzzy find files |
+| `;a` | Search in files (requires Ag/Silver Searcher) |
+| `;b` | List/search buffers |
+
+### Editing
+| Shortcut | Description |
+|----------|-------------|
+| `cs{(` | Change surrounding {} to () |
+| `ds{` | Delete surrounding {} |
+| `yss{` | Add {} around line |
+| `cp` | Copy to system clipboard |
+| `cv` | Paste from system clipboard |
+| `Space` | Add blank line before cursor |
+| `Enter` | Add blank line after cursor |
+| `;r` | Redo |
+| Double-click | Highlight all occurrences of word |
+| `Esc Esc` | Clear search highlighting |
+
+### Comments
+| Shortcut | Description |
+|----------|-------------|
+| `;cc` | Comment out line(s) |
+| `;cu` | Uncomment line(s) |
+
+### Buffer Management
+| Command | Description |
+|---------|-------------|
+| `:BO` | Close all buffers except current one |
+| `:BD` | Delete current buffer |
+
+### Other Useful Commands
+| Command | Description |
+|---------|-------------|
+| `:Guides` | Toggle indent guides |
+| `:Files` | Fuzzy file finder |
+| `:Ag` | Search in files |
+| `:Buffers` | List buffers |
+
+> Note: The `;` key is configured as the leader key. For shortcuts starting with `;`, press the semicolon first, then the following key.
+
+### Windows Setup Requirements
+- For `;a` (Ag search): Install [Silver Searcher](https://github.com/ggreer/the_silver_searcher)
+- For optimal fuzzy finding: Install [fd](https://github.com/sharkdp/fd)
+- For system clipboard integration: Ensure proper clipboard support is configured
