@@ -31,7 +31,17 @@ require("lazy").setup({
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
+      local function on_attach(bufnr)
+        local api = require("nvim-tree.api")
+        -- Apply default mappings
+        api.config.mappings.default_on_attach(bufnr)
+        -- Add window navigation (Shift+h/l) to work in nvim-tree
+        local opts = { buffer = bufnr, noremap = true, silent = true }
+        vim.keymap.set("n", "<S-h>", "<C-w>h", opts)
+        vim.keymap.set("n", "<S-l>", "<C-w>l", opts)
+      end
       require("nvim-tree").setup({
+        on_attach = on_attach,
         view = {
           width = 30,
         },
@@ -55,7 +65,7 @@ require("lazy").setup({
   -- Fuzzy finder (replaces fzf.vim)
   {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.8",
+    branch = "master",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("telescope").setup({
@@ -84,6 +94,7 @@ require("lazy").setup({
   -- Commenting (replaces nerdcommenter)
   {
     "numToStr/Comment.nvim",
+    lazy = false,
     config = function()
       require("Comment").setup({
         padding = true,
@@ -199,6 +210,11 @@ require("lazy").setup({
 
   -- Git integration
   { "tpope/vim-fugitive" },
+}, {
+  -- Lazy.nvim options
+  checker = { enabled = false },           -- Don't auto-check for updates
+  change_detection = { enabled = false },  -- Don't auto-reload config
+  install = { colorscheme = { "tokyonight" } },
 })
 
 --------------------------------------------------------------------------------
@@ -250,7 +266,7 @@ opt.hidden = true
 opt.pumheight = 30
 opt.history = 500
 opt.encoding = "utf-8"
-opt.fileencoding = "utf-8"
+-- Note: fileencoding is buffer-local, set via autocommand or leave as default (utf-8)
 
 -- Folding (disabled by default like original)
 opt.foldmethod = "indent"
@@ -282,6 +298,10 @@ keymap("n", "<Leader>b", ":Telescope buffers<CR>", opts)
 
 -- Redo
 keymap("n", "<Leader>r", "<C-r>", opts)
+
+-- Delete line in normal mode (BS = Mac "delete" key, Del = forward delete)
+keymap("n", "<BS>", "dd", opts)
+keymap("n", "<Del>", "dd", opts)
 
 -- Clear search highlight: Esc Esc
 keymap("n", "<Esc><Esc>", ":noh<CR>", opts)
