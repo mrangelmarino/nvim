@@ -96,6 +96,14 @@ Leader key: `;`
 - Auto-strip trailing whitespace
 - True color support
 
+## Uninstall
+
+```bash
+cd ~/nvim && ./uninstall.sh
+```
+
+Removes symlinks and optionally cleans up plugin data and undo history.
+
 ## Aliases (add to shell config)
 
 ```bash
