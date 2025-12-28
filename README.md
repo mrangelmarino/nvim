@@ -4,34 +4,31 @@ Modern Neovim configuration using lazy.nvim
 
 ## Quick Start
 
-1. Install Neovim (0.9+):
-   ```bash
-   # macOS
-   brew install neovim
+```bash
+git clone https://github.com/mrangelmarino/nvim.git ~/nvim
+cd ~/nvim && ./install.sh
+nvim
+```
 
-   # Ubuntu/Debian
-   sudo apt install neovim
-   ```
+The install script handles dependencies (neovim, ripgrep, fd) and symlinks the config.
 
-2. Install dependencies:
-   ```bash
-   # macOS
-   brew install ripgrep fd
+### Manual Install
 
-   # Ubuntu/Debian
-   sudo apt install ripgrep fd-find
-   ```
+If you prefer manual setup:
 
-3. Clone and set up config:
-   ```bash
-   git clone https://github.com/mrangelmarino/nvim.git
-   ln -s ~/nvim/init.lua ~/.config/nvim/init.lua
-   ```
+```bash
+# Install dependencies
+brew install neovim ripgrep fd   # macOS
+# or: sudo apt install neovim ripgrep fd-find   # Debian/Ubuntu
 
-4. Launch Neovim - plugins install automatically:
-   ```bash
-   nvim
-   ```
+# Clone and symlink
+git clone https://github.com/mrangelmarino/nvim.git ~/nvim
+mkdir -p ~/.config/nvim
+ln -sf ~/nvim/init.lua ~/.config/nvim/init.lua
+
+# Launch (plugins install automatically)
+nvim
+```
 
 ## Plugins
 
