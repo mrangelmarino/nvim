@@ -313,15 +313,17 @@ keymap("n", "<2-LeftMouse>", "*", opts)
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
--- Strip trailing whitespace on save
+-- Strip trailing whitespace on save (only for modifiable buffers)
 augroup("TrimWhitespace", { clear = true })
 autocmd("BufWritePre", {
   group = "TrimWhitespace",
   pattern = "*",
   callback = function()
-    local save_cursor = vim.fn.getpos(".")
-    vim.cmd([[%s/\s\+$//e]])
-    vim.fn.setpos(".", save_cursor)
+    if vim.bo.modifiable then
+      local save_cursor = vim.fn.getpos(".")
+      vim.cmd([[%s/\s\+$//e]])
+      vim.fn.setpos(".", save_cursor)
+    end
   end,
 })
 
