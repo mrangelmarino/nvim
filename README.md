@@ -1,45 +1,73 @@
 # nvim
 
-## Instructions
+Modern Neovim configuration using lazy.nvim
 
-1. Install iTerm
-2. clone repo
-3. Install SFMono Nerd Font
-4. Apply iTerm preferences saved in repo
-  - Set preferences from file but don't save
-  - Quit and reopen
-5. `brew install neovim`
-6. `brew install fd`
-7. `brew install the_silver_searcher`
-8. Add `source $HOME/{directory}/nvim/init.vim` to `~/.config/nvim/init.vim`
-9. `:PlugInstall`
-10. Install Karabiner
-11. Symlink Karabiner preferences: `ln -s ~/{directory}/nvim/karabiner ~/.config`
-12. Restart Karabiner:`launchctl kickstart -k gui/`id -u`/org.pqrs.karabiner.karabiner_console_user_server`
-13. Safari sVimrc gist id: `3e0411beaf6f78c3bec04dbeb0e0bf85`
-14. Safari sVimcss gist id: `3290e93863886572db5b2305c80227f8`
+## Quick Start
 
-## Aliases
+1. Install Neovim (0.9+):
+   ```bash
+   # macOS
+   brew install neovim
 
-`alias v="nvim"`
-`alias vim="nvim"`
+   # Ubuntu/Debian
+   sudo apt install neovim
+   ```
+
+2. Install dependencies:
+   ```bash
+   # macOS
+   brew install ripgrep fd
+
+   # Ubuntu/Debian
+   sudo apt install ripgrep fd-find
+   ```
+
+3. Clone and set up config:
+   ```bash
+   git clone https://github.com/mrangelmarino/nvim.git
+   ln -s ~/nvim/init.lua ~/.config/nvim/init.lua
+   ```
+
+4. Launch Neovim - plugins install automatically:
+   ```bash
+   nvim
+   ```
+
+## Plugins
+
+| Plugin | Purpose |
+|--------|---------|
+| lazy.nvim | Package manager |
+| nvim-tree | File explorer |
+| telescope | Fuzzy finder |
+| nvim-surround | Surround commands (cs/ds/ys) |
+| Comment.nvim | Commenting |
+| nvim-treesitter | Syntax highlighting |
+| lualine | Status bar |
+| gitsigns | Git gutter |
+| tokyonight | Color theme |
+| nvim-autopairs | Auto brackets |
+| vim-fugitive | Git integration |
 
 ## Keyboard Shortcuts
+
+Leader key: `;`
 
 ### Navigation
 | Shortcut | Description |
 |----------|-------------|
-| `\|` or `;n` | Toggle file explorer (NERDTree) |
+| `\|` or `;n` | Toggle file explorer |
 | `Shift + k` | Next buffer |
 | `Shift + j` | Previous buffer |
 | `Shift + h` | Move to left window |
 | `Shift + l` | Move to right window |
+| `j` / `k` | Move by visual line |
 
-### File Finding
+### Finding
 | Shortcut | Description |
 |----------|-------------|
 | `;f` | Fuzzy find files |
-| `;a` | Search in files (requires Ag/Silver Searcher) |
+| `;a` | Live grep (search in files) |
 | `;b` | List/search buffers |
 
 ### Editing
@@ -47,38 +75,47 @@
 |----------|-------------|
 | `cs{(` | Change surrounding {} to () |
 | `ds{` | Delete surrounding {} |
-| `yss{` | Add {} around line |
-| `cp` | Copy to system clipboard |
-| `cv` | Paste from system clipboard |
-| `Space` | Add blank line before cursor |
-| `Enter` | Add blank line after cursor |
+| `ys{motion}{char}` | Add surrounding |
+| `Space` | Add blank line above |
+| `Enter` | Add blank line below |
 | `;r` | Redo |
-| Double-click | Highlight all occurrences of word |
-| `Esc Esc` | Clear search highlighting |
+| `Esc Esc` | Clear search highlight |
+| Double-click | Highlight all occurrences |
 
 ### Comments
 | Shortcut | Description |
 |----------|-------------|
-| `;cc` | Comment out line(s) |
-| `;cu` | Uncomment line(s) |
+| `;cc` | Toggle comment line |
+| `;cb` | Toggle block comment |
 
-### Buffer Management
-| Command | Description |
-|---------|-------------|
-| `:BO` | Close all buffers except current one |
-| `:BD` | Delete current buffer |
+## Settings
 
-### Other Useful Commands
-| Command | Description |
-|---------|-------------|
-| `:Guides` | Toggle indent guides |
-| `:Files` | Fuzzy file finder |
-| `:Ag` | Search in files |
-| `:Buffers` | List buffers |
+- 2-space indentation (spaces, not tabs)
+- Line numbers enabled
+- Mouse enabled
+- Smart case search
+- Persistent undo
+- Color column at 100
+- Auto-strip trailing whitespace
+- True color support
 
-> Note: The `;` key is configured as the leader key. For shortcuts starting with `;`, press the semicolon first, then the following key.
+## Aliases (add to shell config)
 
-### Windows Setup Requirements
-- For `;a` (Ag search): Install [Silver Searcher](https://github.com/ggreer/the_silver_searcher)
-- For optimal fuzzy finding: Install [fd](https://github.com/sharkdp/fd)
-- For system clipboard integration: Ensure proper clipboard support is configured
+```bash
+alias v="nvim"
+alias vim="nvim"
+```
+
+## iTerm & Karabiner (optional)
+
+For the full terminal experience on macOS:
+1. Install SFMono Nerd Font (included in repo)
+2. Import iTerm preferences: `com.googlecode.iterm2.plist`
+3. Install Karabiner and symlink config:
+   ```bash
+   ln -s ~/nvim/karabiner ~/.config/karabiner
+   ```
+
+## Legacy
+
+The old vim-plug configuration is preserved in `init.vim` for reference.
