@@ -334,16 +334,37 @@ local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
 -- Strip trailing whitespace on save (only for modifiable buffers)
+-- Uses line-by-line processing to avoid sequential capture group interference
+-- where preceding edits could modify matches for subsequent patterns
 augroup("TrimWhitespace", { clear = true })
 autocmd("BufWritePre", {
   group = "TrimWhitespace",
   pattern = "*",
   callback = function()
-    if vim.bo.modifiable then
-      local save_cursor = vim.fn.getpos(".")
-      vim.cmd([[%s/\s\+$//e]])
-      vim.fn.setpos(".", save_cursor)
+    if not vim.bo.modifiable then
+      return
     end
+
+    local save_cursor = vim.fn.getpos(".")
+    local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+
+    -- Collect all edits first, then apply them
+    -- This prevents earlier edits from affecting subsequent match positions
+    local edits = {}
+    for i, line in ipairs(lines) do
+      local trimmed = line:gsub("%s+$", "")
+      if trimmed ~= line then
+        table.insert(edits, { line_idx = i, new_content = trimmed })
+      end
+    end
+
+    -- Apply edits in reverse order to preserve line indices
+    for i = #edits, 1, -1 do
+      local edit = edits[i]
+      vim.api.nvim_buf_set_lines(0, edit.line_idx - 1, edit.line_idx, false, { edit.new_content })
+    end
+
+    vim.fn.setpos(".", save_cursor)
   end,
 })
 
