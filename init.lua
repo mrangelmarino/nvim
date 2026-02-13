@@ -210,6 +210,7 @@ require("lazy").setup({
 
   -- Git integration
   { "tpope/vim-fugitive" },
+
 }, {
   -- Lazy.nvim options
   checker = { enabled = false },           -- Don't auto-check for updates
@@ -355,5 +356,30 @@ autocmd("VimEnter", {
     if vim.fn.argc() == 0 then
       require("nvim-tree.api").tree.open()
     end
+  end,
+})
+
+--------------------------------------------------------------------------------
+-- LSP (native vim.lsp.config, Neovim 0.11+)
+--------------------------------------------------------------------------------
+vim.lsp.config.clangd = {
+  cmd = { "clangd" },
+  filetypes = { "c", "cpp", "objc", "objcpp" },
+  root_markers = { "compile_commands.json", "Makefile", ".git" },
+}
+
+vim.lsp.enable("clangd")
+
+-- Keybindings when LSP attaches to a buffer
+autocmd("LspAttach", {
+  callback = function(args)
+    local buf = args.buf
+    local o = { buffer = buf, noremap = true, silent = true }
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, o)
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, o)
+    vim.keymap.set("n", "<Leader>e", vim.diagnostic.open_float, o)
+    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, o)
+    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, o)
+    vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename, o)
   end,
 })
