@@ -111,16 +111,4 @@ alias v="nvim"
 alias vim="nvim"
 ```
 
-## iTerm & Karabiner (optional)
-
-For the full terminal experience on macOS:
-1. Install SFMono Nerd Font (included in repo)
-2. Import iTerm preferences: `com.googlecode.iterm2.plist`
-3. Install Karabiner and symlink config:
-   ```bash
-   ln -s ~/nvim/karabiner ~/.config/karabiner
-   ```
-
-## Legacy
-
-The old vim-plug configuration is preserved in `init.vim` for reference.
+Any Nerd Font in your terminal will work for lualine/nvim-tree glyphs.

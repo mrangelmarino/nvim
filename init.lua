@@ -6,6 +6,12 @@
 vim.g.mapleader = ";"
 vim.g.maplocalleader = ";"
 
+-- Disable unused language providers (all plugins here are Lua)
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_node_provider = 0
+
 --------------------------------------------------------------------------------
 -- Bootstrap lazy.nvim
 --------------------------------------------------------------------------------
@@ -180,7 +186,7 @@ require("lazy").setup({
     end,
   },
 
-  -- Theme (tokyonight, similar dark feel to quantum)
+  -- Theme (tokyonight, darkened + desaturated to match Warp aesthetic)
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -194,6 +200,32 @@ require("lazy").setup({
           comments = { italic = true },
           keywords = { italic = true },
         },
+        on_colors = function(c)
+          -- Near-black backgrounds
+          c.bg           = "#0c0e14"
+          c.bg_dark      = "#080a0f"
+          c.bg_dark1     = "#06080c"
+          c.bg_highlight = "#14161e"
+          c.fg_gutter    = "#282e42"
+
+          -- Muted foreground
+          c.fg      = "#a8b0cc"
+          c.fg_dark = "#7880a0"
+          c.comment = "#404860"
+
+          -- Desaturated syntax palette
+          c.blue    = "#5c80c4"
+          c.blue1   = "#22a0b8"
+          c.cyan    = "#5ca0c0"
+          c.green   = "#6fa050"
+          c.green1  = "#58a890"
+          c.magenta = "#9078c0"
+          c.purple  = "#7860a8"
+          c.orange  = "#c08050"
+          c.yellow  = "#b09050"
+          c.red     = "#c86070"
+          c.teal    = "#189880"
+        end,
       })
       vim.cmd.colorscheme("tokyonight-night")
     end,
@@ -216,6 +248,7 @@ require("lazy").setup({
   checker = { enabled = false },           -- Don't auto-check for updates
   change_detection = { enabled = false },  -- Don't auto-reload config
   install = { colorscheme = { "tokyonight" } },
+  rocks = { enabled = false },             -- No plugins here need luarocks
 })
 
 --------------------------------------------------------------------------------
@@ -236,6 +269,9 @@ opt.number = true
 
 -- Mouse enabled
 opt.mouse = "a"
+
+-- Use system clipboard for all yank/delete/paste
+opt.clipboard = "unnamedplus"
 
 -- Search
 opt.smartcase = true
