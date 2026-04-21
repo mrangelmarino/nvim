@@ -75,6 +75,4 @@ If a change can't be verified programmatically, say so rather than claiming it w
 
 - `install.sh` / `uninstall.sh` — setup scripts (macOS + Debian)
 - `karabiner/` — macOS keyboard remapping config
-- `com.googlecode.iterm2.plist` — iTerm2 preferences
-- `SFMNF.otf` — SFMono Nerd Font
 - `settings.json` / `keybindings.json` / `nvim.code-workspace` — legacy VS Code settings; leave alone, don't update
