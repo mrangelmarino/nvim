@@ -111,14 +111,6 @@ alias v="nvim"
 alias vim="nvim"
 ```
 
-## Karabiner (optional)
-
-Symlink the Karabiner config for macOS keyboard remapping:
-
-```bash
-ln -s ~/nvim/karabiner ~/.config/karabiner
-```
-
 Any Nerd Font in your terminal will work for lualine/nvim-tree glyphs.
 
 ## Legacy

@@ -74,5 +74,4 @@ If a change can't be verified programmatically, say so rather than claiming it w
 ## Other Files
 
 - `install.sh` / `uninstall.sh` — setup scripts (macOS + Debian)
-- `karabiner/` — macOS keyboard remapping config
 - `settings.json` / `keybindings.json` / `nvim.code-workspace` — legacy VS Code settings; leave alone, don't update
