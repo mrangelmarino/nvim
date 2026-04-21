@@ -74,4 +74,3 @@ If a change can't be verified programmatically, say so rather than claiming it w
 ## Other Files
 
 - `install.sh` / `uninstall.sh` — setup scripts (macOS + Debian)
-- `settings.json` / `keybindings.json` / `nvim.code-workspace` — legacy VS Code settings; leave alone, don't update
