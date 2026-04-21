@@ -35,7 +35,6 @@ Everything is in `init.lua`, organized in this order:
 - Persistent undo stored in `~/.config/nvim/backups`
 - Trailing whitespace is auto-stripped on save (skips non-modifiable buffers)
 - `clipboard = "unnamedplus"` — all yanks/deletes/pastes use the system clipboard
-- `init.vim` is the legacy vim-plug config kept for reference — don't modify it
 
 ## Intentional (Unusual) Keybindings
 

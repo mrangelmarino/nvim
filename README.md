@@ -112,7 +112,3 @@ alias vim="nvim"
 ```
 
 Any Nerd Font in your terminal will work for lualine/nvim-tree glyphs.
-
-## Legacy
-
-The old vim-plug configuration is preserved in `init.vim` for reference.
